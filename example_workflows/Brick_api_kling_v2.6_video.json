@@ -240,66 +240,6 @@
       }
     },
     {
-      "id": 393,
-      "type": "SaveArchVizVideo",
-      "pos": [
-        3086.9022442156934,
-        9925.548182602097
-      ],
-      "size": [
-        340,
-        252
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 693
-        }
-      ],
-      "outputs": [
-        {
-          "name": "project_root",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "saved_video_path",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "version",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "aux_id": "brick-momen-sirri/comfyui_brick_tools",
-        "ver": "7ef25ffed73a4ed7c718895ceac0e30080d79fa5",
-        "Node name for S&R": "SaveArchVizVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "0000_base",
-        "kling3.0_i2v",
-        0,
-        "auto",
-        "auto",
-        ""
-      ],
-      "color": "#364152",
-      "bgcolor": "#1c222b",
-      "boxcolor": "#0f141a"
-    },
-    {
       "id": 394,
       "type": "SaveArchVizSequence",
       "pos": [
@@ -435,13 +375,14 @@
         }
       ],
       "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
         "cnr_id": "comfy-core",
         "ver": "0.21.1",
-        "Node name for S&R": "KlingImageToVideoWithAudio"
+        "Node name for S&R": "KlingImageToVideoWithAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
       },
       "widgets_values": [
         "kling-v2-6",
@@ -452,6 +393,66 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 393,
+      "type": "SaveArchVizVideo",
+      "pos": [
+        3086.9022442156934,
+        9925.548182602097
+      ],
+      "size": [
+        340,
+        252
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 693
+        }
+      ],
+      "outputs": [
+        {
+          "name": "project_root",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "saved_video_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "version",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "brick-momen-sirri/comfyui_brick_tools",
+        "ver": "7ef25ffed73a4ed7c718895ceac0e30080d79fa5",
+        "Node name for S&R": "SaveArchVizVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "0000_base",
+        "kling2.6_i2v",
+        0,
+        "auto",
+        "auto",
+        ""
+      ],
+      "color": "#364152",
+      "bgcolor": "#1c222b",
+      "boxcolor": "#0f141a"
     }
   ],
   "links": [
@@ -1055,10 +1056,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.924001221691992,
+      "scale": 0.6830134553650706,
       "offset": [
-        -1592.4973187646922,
-        -9568.550989575144
+        -1401.860272740156,
+        -9341.215257653004
       ]
     },
     "workflowRendererVersion": "LG",
