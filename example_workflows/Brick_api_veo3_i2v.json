@@ -1,0 +1,1080 @@
+{
+  "id": "a55da4ab-8b73-4f7c-a94a-1874fe59b22e",
+  "revision": 0,
+  "last_node_id": 390,
+  "last_link_id": 681,
+  "nodes": [
+    {
+      "id": 382,
+      "type": "MarkdownNote",
+      "pos": [
+        -91.14600892627087,
+        -310.84901999223075
+      ],
+      "size": [
+        340,
+        120
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Instructions",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "### Instructions\n\nPlease generate the prompt first and review it carefully before generating the animation.\n\nAfter fine-tuning the prompt, enable the **Generate Animation** toggle below."
+      ],
+      "color": "#14a4ff",
+      "bgcolor": "#0090ff"
+    },
+    {
+      "id": 383,
+      "type": "GetVideoComponents",
+      "pos": [
+        806.2737252154612,
+        103.96820334511722
+      ],
+      "size": [
+        193.530859375,
+        66
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 679
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            675
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.19.1",
+        "Node name for S&R": "GetVideoComponents",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 387,
+      "type": "ShowText|pysssss",
+      "pos": [
+        711.7609124960677,
+        -264.35229176721805
+      ],
+      "size": [
+        830,
+        210
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 676
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 388,
+      "type": "3f5a91b4-5add-4274-b84a-0f4d02d24a5a",
+      "pos": [
+        311.7609124960678,
+        -264.35229176721805
+      ],
+      "size": [
+        390,
+        210
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 677
+        },
+        {
+          "name": "target_subject_preset",
+          "type": "COMBO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "RESPONSE",
+          "type": "STRING",
+          "links": [
+            676
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "33",
+            "movement_style"
+          ],
+          [
+            "33",
+            "action_type"
+          ],
+          [
+            "33",
+            "speed_modifier"
+          ],
+          [
+            "33",
+            "lock_target_subject"
+          ],
+          [
+            "33",
+            "stability_reinforcement"
+          ],
+          [
+            "32",
+            "seed"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.21.1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 389,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -88.23908750393255,
+        -134.35229176721808
+      ],
+      "size": [
+        342.8457030343428,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Prompt Generator or Generate Animation",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "always one",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      }
+    },
+    {
+      "id": 386,
+      "type": "LoadImage",
+      "pos": [
+        -83.72627478453913,
+        43.96820334511711
+      ],
+      "size": [
+        340,
+        370
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            677,
+            680
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.12.3",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "goldenfish_in_bag.png",
+        "image"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        300,
+        40
+      ],
+      "size": [
+        480,
+        450
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 680
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            679,
+            681
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        "16:9",
+        "1080p",
+        8,
+        true,
+        "ALLOW",
+        2421696867,
+        "randomize",
+        "veo-3.0-fast-generate-001",
+        false,
+        false
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 384,
+      "type": "SaveArchVizVideo",
+      "pos": [
+        1207.3475384105025,
+        45.40179352252188
+      ],
+      "size": [
+        340,
+        252
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 681
+        }
+      ],
+      "outputs": [
+        {
+          "name": "project_root",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "saved_video_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "version",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "brick-momen-sirri/comfyui_brick_tools",
+        "ver": "7ef25ffed73a4ed7c718895ceac0e30080d79fa5",
+        "Node name for S&R": "SaveArchVizVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "0000_base",
+        "veo3_i2v",
+        0,
+        "auto",
+        "auto",
+        ""
+      ],
+      "color": "#364152",
+      "bgcolor": "#1c222b",
+      "boxcolor": "#0f141a"
+    },
+    {
+      "id": 385,
+      "type": "SaveArchVizSequence",
+      "pos": [
+        806.2737252154612,
+        153.9682033451178
+      ],
+      "size": [
+        340,
+        470
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 675
+        }
+      ],
+      "outputs": [
+        {
+          "name": "project_root",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "sequence_version_folder",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "version",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "brick-momen-sirri/comfyui_brick_tools",
+        "ver": "7ef25ffed73a4ed7c718895ceac0e30080d79fa5",
+        "Node name for S&R": "SaveArchVizSequence",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "0000_base",
+        "veo3_i2v",
+        "",
+        "",
+        ""
+      ],
+      "color": "#364152",
+      "bgcolor": "#1c222b",
+      "boxcolor": "#0f141a"
+    }
+  ],
+  "links": [
+    [
+      675,
+      383,
+      0,
+      385,
+      0,
+      "IMAGE"
+    ],
+    [
+      676,
+      388,
+      0,
+      387,
+      0,
+      "STRING"
+    ],
+    [
+      677,
+      386,
+      0,
+      388,
+      0,
+      "IMAGE"
+    ],
+    [
+      679,
+      1,
+      0,
+      383,
+      0,
+      "VIDEO"
+    ],
+    [
+      680,
+      386,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      681,
+      1,
+      0,
+      384,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 7,
+      "title": "Generate Animation",
+      "bounding": [
+        1197.3475384105025,
+        -24.598206477483515,
+        360,
+        332
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Prompt Generator",
+      "bounding": [
+        301.7609124960678,
+        -334.35229176721805,
+        1250,
+        290
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "3f5a91b4-5add-4274-b84a-0f4d02d24a5a",
+        "version": 1,
+        "state": {
+          "lastGroupId": 8,
+          "lastNodeId": 390,
+          "lastLinkId": 681,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Prompt generator",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            1792.1118518291728,
+            9583.879281523732,
+            176.244140625,
+            188
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            2751.4865768054374,
+            9583.879281523732,
+            128,
+            68
+          ]
+        },
+        "inputs": [
+          {
+            "id": "8eeefc34-519d-4de8-bc85-50f29379e722",
+            "name": "image",
+            "type": "IMAGE",
+            "linkIds": [
+              30
+            ],
+            "localized_name": "image",
+            "pos": [
+              1944.3559924541728,
+              9607.879281523732
+            ]
+          },
+          {
+            "id": "caadc6b0-0901-4211-9c06-cc196224f18f",
+            "name": "movement_style",
+            "type": "COMBO",
+            "linkIds": [
+              33
+            ],
+            "pos": [
+              1944.3559924541728,
+              9627.879281523732
+            ]
+          },
+          {
+            "id": "bd0ce2be-82dd-4e9a-82ca-01a5a915804f",
+            "name": "action_type",
+            "type": "COMBO",
+            "linkIds": [
+              34
+            ],
+            "pos": [
+              1944.3559924541728,
+              9647.879281523732
+            ]
+          },
+          {
+            "id": "c2146d3f-cad7-403e-9aac-78b9befe208d",
+            "name": "speed_modifier",
+            "type": "COMBO",
+            "linkIds": [
+              35
+            ],
+            "pos": [
+              1944.3559924541728,
+              9667.879281523732
+            ]
+          },
+          {
+            "id": "6c363d31-6221-4636-a70e-47c9e19c6598",
+            "name": "lock_target_subject",
+            "type": "BOOLEAN",
+            "linkIds": [
+              36
+            ],
+            "pos": [
+              1944.3559924541728,
+              9687.879281523732
+            ]
+          },
+          {
+            "id": "c29e155b-c6fd-4fb8-99d5-7eacb001c1ea",
+            "name": "target_subject_preset",
+            "type": "COMBO",
+            "linkIds": [],
+            "pos": [
+              1944.3559924541728,
+              9707.879281523732
+            ]
+          },
+          {
+            "id": "a915b50c-1f27-418c-af7a-2ef7c8f08ac0",
+            "name": "stability_reinforcement",
+            "type": "BOOLEAN",
+            "linkIds": [
+              38
+            ],
+            "pos": [
+              1944.3559924541728,
+              9727.879281523732
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c262771b-67f0-4f6f-a009-e531b7729801",
+            "name": "RESPONSE",
+            "type": "STRING",
+            "linkIds": [
+              29
+            ],
+            "localized_name": "RESPONSE",
+            "pos": [
+              2775.4865768054374,
+              9607.879281523732
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 30,
+            "type": "ImageResizeKJv2",
+            "pos": [
+              2355.554402100707,
+              9529.483524399599
+            ],
+            "size": [
+              270,
+              286
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 30
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "shape": 7,
+                "type": "MASK",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  27
+                ]
+              },
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "links": null
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "links": null
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "MASK",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "fca78c93f034c6e36080d64da83afe00bd5dbba6",
+              "Node name for S&R": "ImageResizeKJv2",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              1024,
+              1024,
+              "nearest-exact",
+              "resize",
+              "0, 0, 0",
+              "center",
+              2,
+              "cpu"
+            ]
+          },
+          {
+            "id": 31,
+            "type": "StringFunction|pysssss",
+            "pos": [
+              2352.711512555067,
+              9590.415228187785
+            ],
+            "size": [
+              490.7522777282784,
+              2224.1582301843882
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "text_b",
+                "name": "text_b",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "text_b"
+                },
+                "link": 26
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  28
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-custom-scripts",
+              "ver": "1.2.5",
+              "Node name for S&R": "StringFunction|pysssss",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              "append",
+              "yes",
+              "# ROLE\nYou are a cinematic camera operator for AI video. Analyze the image and write a single prompt for Kling 3.0 image-to-video generation.\n\n# YOUR JOB\nDo NOT describe the image like a photo caption.\nThink like a film director: describe CAMERA MOVEMENT and MOTION.\nThe image is fixed. You decide what moves and how the camera behaves.\n\n# STEP 1 — CAMERA CAMERA MOVEMENT\n\n\n",
+              "",
+              "# STEP 2 — MATCH CAMERA TO IMAGE MOOD\n- POWERFUL or HEROIC subject → Orbital or dolly push\n- VAST or EPIC scene → Crane rise or pull back\n- TENSE or EERIE mood → Static lock-off or imperceptible push\n- INTIMATE or EMOTIONAL → Slow dolly push or handheld\n- JOURNEY or PATH visible → Tracking shot\n- SKY or HEIGHT in frame → Tilt up or crane rise\n\n# STEP 3 — BUILD THE PROMPT IN THIS ORDER\n[CAMERA MOVE] + [SUBJECT & SETTING] + [ONE MOVING ELEMENT] + [MOOD] + [LIGHT]\n\n# RULES\n- Camera move is ALWAYS first: include speed + direction + target\n- ONE moving element only: pick the single most cinematic thing that moves\n- If multiple things could move (cars, water, trains, people) pick ONE and ignore the rest\n- 40–75 words total. No more.\n- Do NOT describe sound or audio in any form\n- Light is STATIC — describe it once as a fixed condition, never as something that moves or acts\n\n# BANNED WORDS — if any appear, delete and rewrite that sentence:\nsilently, quietly, hums, echoes,\nbathes, washes, floods, spills, streams, filters,\nilluminates, illuminated, lights up, lit by,\npulses, glows, shimmers, dances, flickers,\ncasts, shifts, catches, plays, falls\n\n# TRAIN RULE — if a train appears, use exactly this phrasing:\n\"A single train moves along the elevated track\"\nNever: \"glides silently\" / \"moves silently\" / \"travels silently\"\n\n# FINAL CHECK — before outputting, verify:\n✅ Starts with a camera move\n✅ Camera move includes speed + direction + target\n✅ Only ONE moving element\n✅ No banned words\n✅ No sound descriptions\n✅ Light described as fixed condition only\n✅ Under 75 words\nIf any check fails — rewrite before outputting.\n\n# OUTPUT FORMAT\nWrite only the prompt paragraph.\nNo labels. No headers. No explanations. No \"KLING PROMPT:\". No \"CAMERA CHOICE:\".\nJust the paragraph. Nothing else.\n\n# EXAMPLE\nSlow crane rise starting at the river's edge, moving upward to reveal a futuristic station and its surrounding infrastructure. A single train moves along the elevated track toward the terminal. Monumental and grounded in urban ambition. Soft diffused daylight on steel, glass, and greenery."
+            ]
+          },
+          {
+            "id": 32,
+            "type": "AILab_QwenVL_GGUF",
+            "pos": [
+              2538.1174361804374,
+              9526.159191300265
+            ],
+            "size": [
+              368.83437890804635,
+              336.03184577414027
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 27
+              },
+              {
+                "localized_name": "video",
+                "name": "video",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "custom_prompt",
+                "name": "custom_prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "custom_prompt"
+                },
+                "link": 28
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "RESPONSE",
+                "name": "RESPONSE",
+                "type": "STRING",
+                "links": [
+                  29
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "ComfyUI-QwenVL",
+              "ver": "fcd1ada87a28f922cb887f779db32429f78a022c",
+              "Node name for S&R": "AILab_QwenVL_GGUF",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              "Qwen3VL-8B-Instruct-Q8_0.gguf",
+              "🖼️ Detailed Description",
+              "# ROLE\nYou are a cinematic camera operator for AI video. Analyze the image and write a single prompt for Kling 3.0 image-to-video generation.\n\n# YOUR JOB\nDo NOT describe the image like a photo caption.\nThink like a film director: describe CAMERA MOVEMENT and MOTION.\nThe image is fixed. You decide what moves and how the camera behaves.\n\n# STEP 1 — CHOOSE YOUR CAMERA MOVE\n\n## PUSH & PULL\n- \"Slow dolly push forward into [subject]\" — tension, intimacy\n- \"Slow dolly pull back revealing [environment]\" — scale, isolation\n- \"Rapid crash zoom into [subject]\" — shock, urgency\n\n## PAN & TILT\n- \"Slow pan left to right across [scene]\" — epic, revealing\n- \"Slow pan right to left across [scene]\" — melancholic\n- \"Slow tilt up from [subject] to [sky]\" — awe, grandeur\n- \"Slow tilt down from [sky] to [subject]\" — foreboding\n\n## ORBIT & ROTATE\n- \"Slow orbital move around [subject] from left to right\" — power, hero\n- \"Slow orbital move around [subject] from right to left\" — mysterious\n- \"Slow clockwise rotation around [subject]\" — dramatic, disorienting\n\n## RISE & DESCEND\n- \"Slow crane rise starting at [subject] revealing the environment\" — epic scale\n- \"Slow crane descend from sky down to [subject]\" — cinematic arrival\n- \"Slow float upward above [scene]\" — ethereal, dreamlike\n\n## STATIC & SUBTLE\n- \"Static lock-off, camera perfectly still\" — tension through stillness\n- \"Subtle handheld breathing motion, nearly static\" — documentary intimacy\n- \"Extremely slow imperceptible push forward\" — creeping dread\n\n## TRACKING\n- \"Slow tracking shot moving alongside [subject]\" — journey\n- \"Low ground-level tracking forward toward [subject]\" — power, threat\n- \"Over-the-shoulder tracking behind [subject]\" — immersive POV\n\n# STEP 2 — MATCH CAMERA TO IMAGE MOOD\n- POWERFUL or HEROIC subject → Orbital or dolly push\n- VAST or EPIC scene → Crane rise or pull back\n- TENSE or EERIE mood → Static lock-off or imperceptible push\n- INTIMATE or EMOTIONAL → Slow dolly push or handheld\n- JOURNEY or PATH visible → Tracking shot\n- SKY or HEIGHT in frame → Tilt up or crane rise\n\n# STEP 3 — BUILD THE PROMPT IN THIS ORDER\n[CAMERA MOVE] + [SUBJECT & SETTING] + [ONE MOVING ELEMENT] + [MOOD] + [LIGHT]\n\n# RULES\n- Camera move is ALWAYS first: include speed + direction + target\n- ONE moving element only: pick the single most cinematic thing that moves\n- If multiple things could move (cars, water, trains, people) pick ONE and ignore the rest\n- 40–75 words total. No more.\n- Do NOT describe sound or audio in any form\n- Light is STATIC — describe it once as a fixed condition, never as something that moves or acts\n\n# BANNED WORDS — if any appear, delete and rewrite that sentence:\nsilently, quietly, hums, echoes,\nbathes, washes, floods, spills, streams, filters,\nilluminates, illuminated, lights up, lit by,\npulses, glows, shimmers, dances, flickers,\ncasts, shifts, catches, plays, falls\n\n# TRAIN RULE — if a train appears, use exactly this phrasing:\n\"A single train moves along the elevated track\"\nNever: \"glides silently\" / \"moves silently\" / \"travels silently\"\n\n# FINAL CHECK — before outputting, verify:\n✅ Starts with a camera move\n✅ Camera move includes speed + direction + target\n✅ Only ONE moving element\n✅ No banned words\n✅ No sound descriptions\n✅ Light described as fixed condition only\n✅ Under 75 words\nIf any check fails — rewrite before outputting.\n\n# OUTPUT FORMAT\nWrite only the prompt paragraph.\nNo labels. No headers. No explanations. No \"KLING PROMPT:\". No \"CAMERA CHOICE:\".\nJust the paragraph. Nothing else.\n\n# EXAMPLE\nSlow crane rise starting at the river's edge, moving upward to reveal a futuristic station and its surrounding infrastructure. A single train moves along the elevated track toward the terminal. Monumental and grounded in urban ambition. Soft diffused daylight on steel, glass, and greenery.",
+              1024,
+              true,
+              2669829953,
+              "fixed"
+            ],
+            "color": "#474539",
+            "bgcolor": "#2c4045"
+          },
+          {
+            "id": 33,
+            "type": "ArchVizCameraPromptBuilder",
+            "pos": [
+              1980.1118518291728,
+              9561.599371747197
+            ],
+            "size": [
+              340,
+              154
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "movement_style",
+                "name": "movement_style",
+                "type": "COMBO",
+                "widget": {
+                  "name": "movement_style"
+                },
+                "link": 33
+              },
+              {
+                "localized_name": "action_type",
+                "name": "action_type",
+                "type": "COMBO",
+                "widget": {
+                  "name": "action_type"
+                },
+                "link": 34
+              },
+              {
+                "localized_name": "speed_modifier",
+                "name": "speed_modifier",
+                "type": "COMBO",
+                "widget": {
+                  "name": "speed_modifier"
+                },
+                "link": 35
+              },
+              {
+                "localized_name": "lock_target_subject",
+                "name": "lock_target_subject",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "lock_target_subject"
+                },
+                "link": 36
+              },
+              {
+                "localized_name": "stability_reinforcement",
+                "name": "stability_reinforcement",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "stability_reinforcement"
+                },
+                "link": 38
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CAMERA_PROMPT",
+                "name": "CAMERA_PROMPT",
+                "type": "STRING",
+                "links": [
+                  26
+                ]
+              }
+            ],
+            "properties": {
+              "aux_id": "brick-momen-sirri/comfyui_brick_tools",
+              "ver": "5df9f270fcb3bf43f5d182abe5f20c0c1838fed8",
+              "Node name for S&R": "ArchVizCameraPromptBuilder",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {},
+                "version": "7.8"
+              }
+            },
+            "widgets_values": [
+              "Linear",
+              "Push Out",
+              "Slow and smooth",
+              false,
+              true
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 26,
+            "origin_id": 33,
+            "origin_slot": 0,
+            "target_id": 31,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 27,
+            "origin_id": 30,
+            "origin_slot": 0,
+            "target_id": 32,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 28,
+            "origin_id": 31,
+            "origin_slot": 0,
+            "target_id": 32,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 30,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 30,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 29,
+            "origin_id": 32,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 33,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 33,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 34,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 33,
+            "target_slot": 1,
+            "type": "COMBO"
+          },
+          {
+            "id": 35,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 33,
+            "target_slot": 2,
+            "type": "COMBO"
+          },
+          {
+            "id": 36,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 33,
+            "target_slot": 3,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 38,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 33,
+            "target_slot": 4,
+            "type": "BOOLEAN"
+          }
+        ],
+        "extra": {
+          "ue_links": []
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8797546012269947,
+      "offset": [
+        340.790720148795,
+        427.6207419640791
+      ]
+    },
+    "frontendVersion": "1.43.18",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": []
+  },
+  "version": 0.4
+}
